@@ -1,4 +1,4 @@
-# Smash Or Passe 
+# Smash Or Pass
 ## Projet Web ING1 S1 
 
 Site de rencontre innovant qui propose une expérience ludique et interactive pour aider les utilisateurs à trouver leur âme sœur.
