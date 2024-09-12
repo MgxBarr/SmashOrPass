@@ -1,0 +1,683 @@
+/* BODY */
+body {
+    margin: 0;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+    /* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height : 12vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 2;  
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.logo img {
+    height: 8vh;
+    margin: 0 2vh;
+}
+.subscribe {
+    margin: auto auto auto 5vh;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 5vh;
+}
+.menu-icon {
+    height: 1.5em;
+    margin: 0 0.5em;
+}
+.menu-item {
+    text-decoration: none;
+    color: #343434;
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 1em;
+    transition:all 0.3s ease-in-out;
+}
+.menu-item:hover {
+    transform: scale(1.1);
+    color:#cc3e3e;
+    font-weight: 800;
+}
+.menu-item:before {
+    content:'';
+    position:absolute;
+    width:0;
+    height:3px;
+    bottom:0;
+    left:33%;
+    top:3vh;
+    background-color:#cc3e3e;
+    visibility:hidden;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+.menu-item:hover:before{
+    visibility:visible;
+    width:69%;
+}
+.menu-item-profile:before {
+    left:50%;
+}
+.menu-item-profile:hover:before {
+    width: 52%;
+}
+
+
+
+.sub-btn {
+    display: flex;
+    padding: 16px 32px;
+    cursor: pointer;
+    gap: 0.4rem;
+    font-size: 2vh;
+    font-weight: bold;
+    border-radius: 24px;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background: linear-gradient(15deg, #76000e, #aa203e, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa203e, #76000e) no-repeat;
+    background-size: 300%;
+    color: #fff;
+    border: none;
+    background-position: left center;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+    transition: background .3s ease;
+}
+
+.sub-btn:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+
+
+    /* MAIN */
+.main {
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-offset {
+    height: 18vh;
+    width: 100%;
+}
+
+.title {
+   color: #cc3e3e;
+   font-weight: 1000;
+   font-size: 5em;
+   width: 70%;
+   text-align: left;
+}
+
+
+
+
+
+
+
+/* Disconnect Btn */
+.disconnect-btn {
+   font-family: "Nunito", sans-serif;
+   display: inline-block;
+   outline: none;
+   cursor: pointer;
+   font-size: 1.8vh;
+   font-weight: 700;
+   border-radius: 3em;
+   padding: 0.5em 1.5em;
+   border: 3px solid #cc3e3e;
+   background: #cc3e3e;
+   color: #fff;
+   transition:all 0.3s ease-in-out;
+   margin-left: 3em;
+}
+
+
+/* Menu Admin */
+.menu-admin-btn {
+    font-family: "Nunito", sans-serif;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 2vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #cc3e3e;
+    margin-right: 3em;
+    border-bottom: 0.18em solid #cc3e3e;
+    transition:all 0.3s ease-in-out;
+ }
+
+
+
+
+
+
+
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*align-items: center;*/
+    padding: 6vh;
+    width: 60%;
+    border-radius: 3em;
+    /*border: #cc3e3e 0.5em solid;*/
+    margin-top: 2em;
+    margin-bottom: 10em;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 0.4em solid #cc3e3e;
+}
+/* profile menu */
+.profile-menu {
+   display: flex;
+   width: 25%;
+   flex-direction: column;
+   align-items: center;
+}
+.profile-picture {
+    width: 20vh;
+    margin-left: 0;
+    border-radius: 50%;
+    border: #cc3e3e 0.3em solid;
+    outline: none;
+ }
+
+.profile-btns {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   margin: 2em 0;
+   gap: 0.5em;
+}
+
+.profile-btns input {
+    margin: 0.5em 0;
+}
+
+.edit-btn {
+   font-family: "Nunito", sans-serif;
+   font-weight: 700;
+   display: inline-block;
+   outline: none;
+   cursor: pointer;
+   font-size: 2vh;
+   border-radius: 1.3em;
+   padding: 0.8em 1.8em;
+   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+   border: rgb(204, 62, 62) solid 3px;
+   background-color: transparent;
+   color: #cc3e3e;
+   transition:all 0.3s ease-in-out;
+}
+
+.message-btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 2vh;
+    border-radius: 1.3em;
+    padding: 0.8em 1.8em;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    border: rgb(204, 62, 62) solid 3px;
+    background-color: #cc3e3e;
+    color: #fff;
+    transition:all 0.3s ease-in-out;
+ }
+
+ .like-btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 2vh;
+    border-radius: 1.3em;
+    padding: 0.8em 1.8em;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    border: rgb(204, 62, 62) solid 0.2em;
+    background-color: #fff;
+    color: #cc3e3e;
+    transition:all 0.3s ease-in-out;
+ }
+
+ .like-btn img {
+    height: 3vh;
+    width: 3vh;
+    vertical-align: middle;
+    margin-bottom: 0.17em;
+ }
+
+.like-btn-liked {
+    background-color: #cc3e3e;
+    color: #fff;
+    font-weight: 900;
+}
+
+
+
+
+
+
+.profile-subscription {
+    font-size: 2vh;
+}
+.profile-subscription p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0.5em 0;
+}
+
+.profile-private-informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 2em;
+}
+
+.profile-private-informations .profile-input {
+    width: 100%;
+}
+
+
+
+
+
+.profile-infos {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.profile-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.profile-subtitle {
+    font-size: 2vh;
+    font-weight: 500;
+    color:#cc3e3e;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 1em 0;
+}
+
+.profile-row.demo-info .profile-input {
+    width: 27%;
+}
+
+
+
+
+
+
+
+
+    /* pictures */
+.row-pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upload-picture {
+    width: 25vh;
+    height: 25vh;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 15%;
+    overflow: hidden;
+  }
+.picture-file {
+    display: none;
+}
+.upload-picture  img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    z-index: 0;
+    margin: -1px;
+}
+
+.picture-label {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+.upload-picture:hover .label {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    font-weight: 500;
+    font-size: 2.5vh;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(204, 62, 62, 0.2);
+    color: #fff;
+    border-radius: 15%;
+}
+
+.profile-image {
+    border: #cc3e3e 0.1em solid;
+    height: 20vh;
+    width: 20vh;
+}
+.profile-image img {
+    border-radius: 0%;
+}
+
+
+
+
+
+
+
+.profile-picture {
+    width: 25vh;
+    height: 25vh;
+    margin-left: 0;
+    border-radius: 15%;
+    border: #cc3e3e 0.3em solid;
+    outline: none;
+ }
+
+.pseudo {
+    width: 30%;
+}
+
+
+
+
+ 
+
+
+
+
+
+#age {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.profile-input {
+    color: #343434;
+    border: none;
+    min-height: 4vh;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1em 0;
+}
+.profile-input input {
+    font-size: 2vh;
+    width: 90%;
+    height: 90%;
+    outline: none;
+    border: none;
+    user-select: none;
+    text-transform: capitalize;
+    text-align: justify;
+    overflow: hidden;
+}
+.profile-input label {
+    position: absolute;
+    top: -1em;
+    left: 1em;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+    color: #cc3e3e;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+
+
+.editable {
+    color: #343434;
+    border: 0.1em solid #cc3e3e;
+    border-radius: 1em;
+    min-height: 4vh;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1em 0;
+}
+.editable input {
+    font-size: 2vh;
+    width: 80%;
+    height: 90%;
+    outline: none;
+    border: none;
+    text-transform: none;
+}
+.editable label {
+    position: absolute;
+    top: -0.75em;
+    left: 1em;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+    color: #cc3e3e;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.profile-private-informations {
+    text-transform: none;
+}
+
+
+.pseudo {
+    height: 7vh;
+    width: unset;
+}
+.pseudo input {
+    width: unset;
+    font-size: 5vh;
+    font-weight: 900;
+    color: #343434;
+    overflow: hidden;
+}
+#pseudo-label {
+    display: none;
+}
+
+
+.row-text {
+    flex-direction: column;
+    margin: 4em 0;
+}
+.textarea.editable {
+    height: unset;
+}
+.profile-input textarea {
+    font-family: "Nunito", sans-serif;
+    border: none;
+    width: 100%;
+    font-size: 2vh;
+    color: #343434;
+    outline: none;
+    resize: none;
+    margin: 0;
+    height: auto;
+    text-align: justify;
+    overflow-x: hidden;
+}
+
+.profile-row.demo-info .profile-input-big {
+    width: 37%;
+}
+
+
+
+
+
+
+
+
+.visited {
+    margin-top: 5em;
+}
+.row-visited {
+    gap: 2em;
+    margin: auto;
+    margin-left: 2em;
+}
+.user-profile {
+    width: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #343434;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+ }
+ .user-profile:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+ }
+ .user-picture {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: #cc3e3e 0.12em solid;
+    outline: none;
+ }
+ .user-picture-flou {
+    filter: blur(4px) grayscale(70%);
+ }
+ .user-nickname-flou {
+    filter: blur(3px);
+ }
+
+
+
+
+
+
+
+
+
+
+
+ /* Popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(209, 209, 209, 0.5);
+    justify-content: center;
+    align-items: center;
+ }
+ .popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: #fff;
+    padding: 1em 1.25em;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+ }
+ 
+ .popup-content p {
+    font-size: 2.5vh;
+    margin: 0;
+ }
+ 
+ .popup-content .close {
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5vh;
+    line-height: 1.25em;
+    margin-top: 1em;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.75em 1em;
+    text-align: center;
+    border: none;
+    border: 0.2em solid #cc3e3e;
+    background-color: #fff;
+    color: #cc3e3e;
+    transition:all 0.3s ease-in-out;
+ }
+
+
+
+
+
+
+/* footer */
+.footer {
+   width: 100%;
+   height: 0;
+}
+

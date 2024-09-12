@@ -1,0 +1,327 @@
+/* BODY */
+body {
+    margin: 0;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+    /* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height : 12vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 2;  
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.logo img {
+    height: 8vh;
+    margin: 0 2vh;
+}
+.subscribe {
+    margin: auto auto auto 5vh;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 5vh;
+}
+.menu-icon {
+    height: 1.5em;
+    margin: 0 0.5em;
+}
+.menu-item {
+    text-decoration: none;
+    color: #343434;
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 1em;
+    transition:all 0.3s ease-in-out;
+}
+.menu-item:hover {
+    transform: scale(1.1);
+    color:#cc3e3e;
+    font-weight: 800;
+}
+.menu-item:before {
+    content:'';
+    position:absolute;
+    width:0;
+    height:3px;
+    bottom:0;
+    left:33%;
+    top:3vh;
+    background-color:#cc3e3e;
+    visibility:hidden;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+.menu-item:hover:before{
+    visibility:visible;
+    width:69%;
+}
+.menu-item-profile:before {
+    left:50%;
+}
+.menu-item-profile:hover:before {
+    width: 52%;
+}
+
+
+
+.sub-btn {
+    display: flex;
+    padding: 16px 32px;
+    cursor: pointer;
+    gap: 0.4rem;
+    font-size: 2vh;
+    font-weight: bold;
+    border-radius: 24px;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background: linear-gradient(15deg, #76000e, #aa203e, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa203e, #76000e) no-repeat;
+    background-size: 300%;
+    color: #fff;
+    border: none;
+    background-position: left center;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+    transition: background .3s ease;
+}
+
+.sub-btn:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+
+
+    /* MAIN */
+.main {
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-offset {
+    height: 18vh;
+    width: 100%;
+}
+
+/* Disconnect Btn */
+.disconnect-btn {
+   font-family: "Nunito", sans-serif;
+   display: inline-block;
+   outline: none;
+   cursor: pointer;
+   font-size: 1.8vh;
+   font-weight: 700;
+   border-radius: 3em;
+   padding: 0.5em 1.5em;
+   border: 3px solid #cc3e3e;
+   background: #cc3e3e;
+   color: #fff;
+   transition:all 0.3s ease-in-out;
+   margin-left: 3em;
+}
+
+/* Menu Admin */
+.menu-admin-btn {
+    font-family: "Nunito", sans-serif;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 2vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #cc3e3e;
+    margin-right: 3em;
+    border-bottom: 0.18em solid #cc3e3e;
+    transition:all 0.3s ease-in-out;
+ }
+
+/* footer */
+.footer {
+   width: 100%;
+   height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title {
+    color: #cc3e3e;
+    font-weight: 1000;
+    font-size: 5em;
+    width: 70%;
+    text-align: center;
+}
+
+.research-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.no-results {
+    font-size: 2.5vh;
+    font-weight: 800;
+    color: #343434;
+    text-align: center;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 2em;
+    border-style: none;
+    box-shadow: #36363633 0 3px 5px -1px, #00000024 0 6px 10px 0, #0000001f 0 1px 18px 0;
+    color: #343434;
+    min-height: 10vh;
+    padding: 1em 3em;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.profile-picture {
+    width: 6em;
+    height: 6em;
+    margin-left: 0;
+    border-radius: 50%;
+    border: #cc3e3e 0.3em solid;
+    outline: none;
+    align-self: center;
+}
+
+.profile-infos {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: auto;
+}
+
+.pseudonyme {
+    font-size: 3vh;
+    font-weight: 800;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: #343434;
+    margin: 0 1em;
+}
+
+.profile-infos-2 {
+    display: flex;
+    flex-direction: row;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #343434;
+}
+
+.profile-infos-2 p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0.5em 1em;
+}
+
+.go-to-profile {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 2vh;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    border: rgb(204, 62, 62) solid 3px;
+    background-color: #cc3e3e;
+    color: #fff;
+    transition:all 0.3s ease-in-out;
+    align-self: center;
+    text-decoration: none;
+}
+
+.go-to-profile:hover {
+    transform: scale(1.05);
+    box-shadow: #36363633 0 3px 5px -1px, #00000024 0 6px 10px 0, #0000001f 0 1px 18px 0;
+}
+
+
+
+
+
+
+.suggest {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 3vh;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    border: rgb(204, 62, 62) solid 3px;
+    background-color: #cc3e3e;
+    color: #fff;
+    transition:all 0.3s ease-in-out;
+    margin: 3em 0;
+}
+.suggest:hover {
+    transform: translateY(-0.2em);
+    box-shadow: #36363633 0 3px 5px -1px, #00000024 0 6px 10px 0, #0000001f 0 1px 18px 0;
+}
