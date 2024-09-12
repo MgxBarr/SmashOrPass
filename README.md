@@ -15,7 +15,7 @@ $ sudo systemctl restart apache2
 Ouvrir un terminal dans le dossier qui contient le projet. 
 Entrer la commande suivante : 
 ```
-$ php -S localhost:8080
+php -S localhost:8080
 ```
 Ouvrir un navigateur et se rendre à l'adresse suivante : localhost/phpmyadmin.
 Se connecter avec son login et son mot de passe. 
@@ -33,13 +33,13 @@ Cocher <i>grant all privileges on database site_rencontre.sql</i>.
 - via l'invite de commande :
 Entrer la commande :
 ```
-$ sudo mysql -u root -p
+sudo mysql -u root -p
 ```
 Entrer vos login et mot de passe root puis les commandes suivantes :
 ```
-$ CREATE USER 'test'@'localhost' IDENTIFIED BY 'Testmdp@65);
-$ GRANT ALL PRIVILEGES ON site_rencontre.* TO 'test'@'localhost';
-$ FLUSH PRIVILEGES;
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'Testmdp@65);
+GRANT ALL PRIVILEGES ON site_rencontre.* TO 'test'@'localhost';
+FLUSH PRIVILEGES;
 ```
 
 #### Méthode 2
